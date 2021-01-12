@@ -80,7 +80,7 @@ class Minimax():
         # Evaluate heuristic at leaf node
         if remaining_depth <= 0:
             v = self.heuristic(canonicalBoard)
-            return min(max(v, -1), 1)  # Constrains invalid heuristic range
+            return -min(max(v, -1), 1)  # Constrains invalid heuristic range
 
         # Mask of valid moves
         valids = self.game.getValidMoves(canonicalBoard, 1)
