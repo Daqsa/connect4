@@ -25,6 +25,14 @@ ytp = YOURTEAMPlayer(g).play
 
 arena = Arena.Arena(mm5p, mm4p, g)
 
+"""
+result, times = arena.playGame(verbose=True)
+if result == 1:
+    print("P1 won")
+else:
+    print("P2 won")
+"""
+
 p1wins, p2wins, draws, average_times = arena.playGames(num=10, verbose=True)
 
 print('P1 won', p1wins, 'times')

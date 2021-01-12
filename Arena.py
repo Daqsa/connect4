@@ -49,8 +49,10 @@ class Arena():
             decision_time = time.time() - start_time
             if curPlayer == 1:
                 total_turn_lengths[0] += decision_time
+                print("Player 1 time:", decision_time)
             else:
                 total_turn_lengths[1] += decision_time
+                print("Player 2 time:", decision_time)
 
             valids = self.game.getValidMoves(self.game.getCanonicalForm(board, curPlayer), 1)
 
@@ -66,7 +68,7 @@ class Arena():
         average_turn_lengths = [total_turn_lengths[0] / ((it + 1) // 2), total_turn_lengths[1] / (it // 2)]
         if verbose:
             print("Game over: Turn ", str(it), "Result ", str(res))
-            self.game.display(board)
+            self.game.display(board, wait=True)
         return res, average_turn_lengths
 
     def playGames(self, num, verbose=False):
@@ -97,6 +99,7 @@ class Arena():
             average_times[1] += game_average_times[1]
 
         self.player1, self.player2 = self.player2, self.player1
+        print("Swapping sides!")
 
         for _ in tqdm(range(num), desc="Arena.playGames (2)"):
             gameResult, game_average_times = self.playGame(verbose=verbose)
