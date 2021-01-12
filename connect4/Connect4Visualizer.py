@@ -24,7 +24,7 @@ class Connect4Visualizer:
         self.game_closed = False
 
 
-    def draw_board(self, canonical_board, red_label=1, blue_label=-1, wait=False):
+    def draw_board(self, canonical_board, red_label=1, blue_label=-1):
         if not self.game_closed:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -58,5 +58,4 @@ class Connect4Visualizer:
                     elif element == blue_label:
                         pygame.draw.circle(self.screen, BLUE, pos, self.radius)
             pygame.display.flip()
-            if wait:
-                pygame.time.wait(1000)
+            pygame.time.wait(1000)

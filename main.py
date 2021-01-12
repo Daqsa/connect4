@@ -30,7 +30,7 @@ result, times = arena.playGame(verbose=True)
 if result == 1:
     print("P1 won")
 else:
-    print("P2 won")
+    print("P2 won")z
 """
 
 p1wins, p2wins, draws, average_times = arena.playGames(num=10, verbose=True)

@@ -68,7 +68,7 @@ class Arena():
         average_turn_lengths = [total_turn_lengths[0] / ((it + 1) // 2), total_turn_lengths[1] / (it // 2)]
         if verbose:
             print("Game over: Turn ", str(it), "Result ", str(res))
-            self.game.display(board, wait=True)
+            self.game.display(board)
         return res, average_turn_lengths
 
     def playGames(self, num, verbose=False):
