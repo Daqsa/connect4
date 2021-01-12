@@ -26,11 +26,17 @@ Here's the step-by-step version if you have simple IDLE in Windows:
 - Right-click the Command Prompt program and choose Run as administrator.
 - If it asks if it can make changes, select Yes.
 - Type:
+
 py -3 -m pip install --upgrade pip
+
 - Then type:
+
 py -3 -m pip install numpy
+
 py -3 -m pip install tqdm
+
 py -3 -m pip install pygame
+
 - Click on the green Code button on the GitHub page
 - Choose Download ZIP
 - Extract the resulting downloaded file somewhere on your computer.
